@@ -1,4 +1,6 @@
 import React , {useState} from 'react';
+import NewSongForm from './NewSongForm'
+
 
 function SongList(){
   const [songs, setSongs] = useState([
@@ -14,11 +16,9 @@ function SongList(){
   return(
     <div className="song-list">
       <ul>
-        {songs.map(song => <li key={song.id}>{song.title}</li>)}  
+        {songs.map(song => <li key={song.id}>{song.title}</li>)} 
+        <NewSongForm/> 
       </ul>
-      <label>Song </label>
-      <input type="text" placeHolder="Add a song here" required/>
-      <button onClick={addSong}>Add a new Song</button>
     </div>
   )
 }
