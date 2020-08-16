@@ -9,16 +9,16 @@ function SongList(){
     {title: "A Ele a Glória", id:1}
   ])
 
-  const addSong = () =>{
-    setSongs([...songs, {title:"Porque Dele e por Ele", id: 4}])
+  const addSong = (title) =>{
+    setSongs([...songs, {title:title, id: 4}])
   }
 
   return(
     <div className="song-list">
       <ul>
         {songs.map(song => <li key={song.id}>{song.title}</li>)} 
-        <NewSongForm/> 
       </ul>
+      <NewSongForm addSong={addSong}/> 
     </div>
   )
 }
