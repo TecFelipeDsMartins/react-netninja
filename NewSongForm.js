@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 
-
 function NewSongForm({ addSong }){
   const [title, setTitle] = useState('')
   
@@ -11,7 +10,6 @@ function NewSongForm({ addSong }){
     e.preventDefault()
     addSong(title)
     setTitle('')
-
   }
   return(
     <form onSubmit={handleSubmit}>
